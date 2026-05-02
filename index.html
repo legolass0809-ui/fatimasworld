@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatima's World — A Cozy Universe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bgMusic" loop preload="auto">
+        <source src="feel-it.mp3" type="audio/mpeg">
+        Your browser does not support audio playback.
+    </audio>
+
+    <div class="intro-overlay" id="introOverlay">
+        <div class="intro-panel">
+            <div class="intro-title">Welcome to Fatima's World ✨</div>
+            <div class="intro-subtitle">A cozy interactive universe</div>
+            <button class="start-btn" id="startBtn">▶ Start Experience with Music</button>
+        </div>
+        <div class="developer-credit" id="developerCredit">Developed by Ali Seyfullazade</div>
+    </div>
+
+    <nav class="nav-bar hidden">
+        <button class="nav-btn active" data-section="home">🌸 Home</button>
+        <button class="nav-btn" data-section="favourites">💖 Favourites</button>
+        <button class="nav-btn" data-section="mood-zone">🎧 Mood Zone</button>
+        <button class="nav-btn" data-section="miya-chaos">🐱 Miya Chaos</button>
+        <button class="nav-btn" data-section="ending">💖 Ending</button>
+    </nav>
+
+    <section class="section active" id="home">
+        <div class="bg"></div>
+        <div class="section1-ambient">
+            <div class="floating-star star1"></div>
+            <div class="floating-star star2"></div>
+            <div class="floating-star star3"></div>
+            <div class="floating-star star4"></div>
+            <!-- Flying crochet heart cat emojis -->
+            <div class="flying-emoji crochet1">🧶</div>
+            <div class="flying-emoji heart1">💖</div>
+            <div class="flying-emoji cat1">🐱</div>
+            <div class="flying-emoji crochet2">🧶</div>
+            <div class="flying-emoji heart2">💖</div>
+            <div class="flying-emoji cat2">🐱</div>
+            <div class="flying-emoji crochet3">🧶</div>
+            <div class="flying-emoji heart3">💖</div>
+            <!-- Floating geometric shapes -->
+            <div class="floating-shape shape1">⬡</div>
+            <div class="floating-shape shape2">△</div>
+            <div class="floating-shape shape3">⬡</div>
+            <div class="floating-shape shape4">○</div>
+            <div class="floating-shape shape5">△</div>
+            <!-- Additional floating elements -->
+            <div class="floating-shape shape6">⬡</div>
+            <div class="floating-shape shape7">✦</div>
+            <div class="floating-shape shape8">◇</div>
+            <div class="floating-shape shape9">○</div>
+            <div class="floating-shape shape10">✦</div>
+            <!-- More flying emojis -->
+            <div class="flying-emoji music1">🎵</div>
+            <div class="flying-emoji book1">📚</div>
+            <div class="flying-emoji coffee1">☕</div>
+            <div class="flying-emoji music2">🎵</div>
+            <div class="flying-emoji book2">📚</div>
+            <div class="flying-emoji coffee2">☕</div>
+        </div>
+        <div class="particles" id="particles1"></div>
+        <div class="scene-card">
+            <div class="title">Hey Fatima 👀</div>
+            <div class="subtitle">This landing card is playful — hover the button and see.</div>
+            <div class="scene-copy">A soft animated world waits behind the curtain. Press start to unlock the fun!</div>
+            <button class="start-btn" id="section1StartBtn">Enter the World →</button>
+            <div class="hint-text" id="section1Hint">Tap the button and let the fun begin!</div>
+        </div>
+        <div class="confetti-container" id="confettiContainer"></div>
+    </section>
+
+    <section class="section" id="favourites">
+        <div class="bg"></div>
+        <div class="particles" id="particles2"></div>
+        <div class="section2-ambient">
+            <!-- Universe stars and planets -->
+            <div class="floating-star star1"></div>
+            <div class="floating-star star2"></div>
+            <div class="floating-star star3"></div>
+            <div class="floating-star star4"></div>
+            <div class="floating-star star5"></div>
+            <div class="floating-star star6"></div>
+            <!-- Planets -->
+            <div class="floating-planet planet1">🪐</div>
+            <div class="floating-planet planet2">🌍</div>
+            <div class="floating-planet planet3">🌙</div>
+            <div class="floating-planet planet4">🪐</div>
+            <div class="floating-planet planet5">🌍</div>
+            <!-- Space emojis -->
+            <div class="flying-emoji rocket1">🚀</div>
+            <div class="flying-emoji star1">⭐</div>
+            <div class="flying-emoji comet1">☄️</div>
+            <div class="flying-emoji rocket2">🚀</div>
+            <div class="flying-emoji star2">⭐</div>
+            <div class="flying-emoji comet2">☄️</div>
+            <!-- Geometric shapes -->
+            <div class="floating-shape shape1">⬡</div>
+            <div class="floating-shape shape2">△</div>
+            <div class="floating-shape shape3">⬡</div>
+            <div class="floating-shape shape4">○</div>
+            <div class="floating-shape shape5">△</div>
+            <div class="floating-shape shape6">⬡</div>
+            <div class="floating-shape shape7">✦</div>
+            <div class="floating-shape shape8">◇</div>
+            <div class="floating-shape shape9">○</div>
+            <div class="floating-shape shape10">✦</div>
+        </div>
+        <div class="scene-card">
+            <div class="title">Her Favourites</div>
+            <div class="subtitle">A floating playground of her sweetest favourites.</div>
+            <div class="scene-copy">Hover anything to see it come alive. Click an object for a playful note.</div>
+            <div class="object-grid">
+                <button class="floating-object" data-description="This yarn is secretly knitting a smile.">🧶</button>
+                <button class="floating-object" data-description="These headphones are humming your favorite tune.">🎧</button>
+                <button class="floating-object" data-description="A slice of cake that says 'you deserve a treat'.">🍰</button>
+                <button class="floating-object" data-description="A stack of books whispering playful ideas.">📚</button>
+                <button class="floating-object" data-description="Cat prints leading you to hidden mischief.">🐾</button>
+            </div>
+            <div class="section-note" id="section2Note">Click a floating object for a sweet note.</div>
+        </div>
+        <div class="popup-card" id="objectPopup">
+            <div class="popup-message" id="popupMessage"></div>
+            <button class="popup-close" id="popupClose">Got it!</button>
+        </div>
+    </section>
+
+    <section class="section mood-section" id="mood-zone">
+        <div class="bg"></div>
+        <div class="mood-bg" id="moodBg"></div>
+        <div class="particles" id="particles3"></div>
+        <div class="section3-ambient">
+            <!-- Mood zone floating elements -->
+            <div class="floating-star star1"></div>
+            <div class="floating-star star2"></div>
+            <div class="floating-star star3"></div>
+            <div class="floating-star star4"></div>
+            <!-- Mood emojis -->
+            <div class="flying-emoji happy1">😊</div>
+            <div class="flying-emoji spark1">✨</div>
+            <div class="flying-emoji heart1">💖</div>
+            <div class="flying-emoji happy2">😊</div>
+            <div class="flying-emoji spark2">✨</div>
+            <div class="flying-emoji heart2">💖</div>
+            <div class="flying-emoji happy3">😊</div>
+            <div class="flying-emoji spark3">✨</div>
+            <!-- Geometric shapes -->
+            <div class="floating-shape shape1">⬡</div>
+            <div class="floating-shape shape2">△</div>
+            <div class="floating-shape shape3">⬡</div>
+            <div class="floating-shape shape4">○</div>
+            <div class="floating-shape shape5">△</div>
+            <div class="floating-shape shape6">⬡</div>
+            <div class="floating-shape shape7">✦</div>
+            <div class="floating-shape shape8">◇</div>
+            <div class="floating-shape shape9">○</div>
+            <div class="floating-shape shape10">✦</div>
+            <!-- Additional mood elements -->
+            <div class="flying-emoji rainbow1">🌈</div>
+            <div class="flying-emoji flower1">🌸</div>
+            <div class="flying-emoji butterfly1">🦋</div>
+            <div class="flying-emoji rainbow2">🌈</div>
+            <div class="flying-emoji flower2">🌸</div>
+            <div class="flying-emoji butterfly2">🦋</div>
+        </div>
+        <div class="scene-card">
+            <div class="title" id="moodTitle">Mood Generator</div>
+            <div class="subtitle" id="moodSubtitle">Play with color, motion, and silly moods.</div>
+            <div class="scene-copy" id="moodCopy">Tap the button to spin the mood wheel, change the scene, and see your vibe.</div>
+            <div class="mood-panel">
+                <button class="mood-button" id="moodBtn">Generate Mood</button>
+                <div class="mood-result" id="moodResult">Your mood will appear here.</div>
+            </div>
+            <div class="mood-visual" id="moodVisual">
+                <div class="emoji">✨</div>
+                <div class="scene-detail">A gentle glow of pastel stars swirls around.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="miya-chaos">
+        <div class="bg"></div>
+        <div class="particles" id="particles4"></div>
+        <div class="section4-ambient">
+            <!-- Miya Chaos floating elements -->
+            <div class="floating-star star1"></div>
+            <div class="floating-star star2"></div>
+            <div class="floating-star star3"></div>
+            <div class="floating-star star4"></div>
+            <!-- Chaos emojis -->
+            <div class="flying-emoji cat1">🐱</div>
+            <div class="flying-emoji yarn1">🧶</div>
+            <div class="flying-emoji ball1">⚽</div>
+            <div class="flying-emoji cat2">🐱</div>
+            <div class="flying-emoji yarn2">🧶</div>
+            <div class="flying-emoji ball2">⚽</div>
+            <div class="flying-emoji cat3">🐱</div>
+            <div class="flying-emoji yarn3">🧶</div>
+            <!-- Geometric shapes -->
+            <div class="floating-shape shape1">⬡</div>
+            <div class="floating-shape shape2">△</div>
+            <div class="floating-shape shape3">⬡</div>
+            <div class="floating-shape shape4">○</div>
+            <div class="floating-shape shape5">△</div>
+            <div class="floating-shape shape6">⬡</div>
+            <div class="floating-shape shape7">✦</div>
+            <div class="floating-shape shape8">◇</div>
+            <div class="floating-shape shape9">○</div>
+            <div class="floating-shape shape10">✦</div>
+            <!-- More chaos elements -->
+            <div class="flying-emoji toy1">🧸</div>
+            <div class="flying-emoji bell1">🔔</div>
+            <div class="flying-emoji fish1">🐠</div>
+            <div class="flying-emoji toy2">🧸</div>
+            <div class="flying-emoji bell2">🔔</div>
+            <div class="flying-emoji fish2">🐠</div>
+        </div>
+        <div class="scene-card">
+            <div class="title">Miya Chaos Mode</div>
+            <div class="subtitle">A mischievous cat scene that moves around.</div>
+            <div class="scene-copy">Click Miya and watch her dash away with playful messages.</div>
+            <div class="cat-scene" id="catScene">
+                <div class="cat" id="cat">🐱</div>
+                <div class="cat-message" id="catMessage">Tap the cat and see what happens!</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="ending">
+        <div class="bg"></div>
+        <div class="particles" id="particles5"></div>
+        <div class="section5-ambient">
+            <!-- Ending floating elements -->
+            <div class="floating-star star1"></div>
+            <div class="floating-star star2"></div>
+            <div class="floating-star star3"></div>
+            <div class="floating-star star4"></div>
+            <!-- Ending emojis -->
+            <div class="flying-emoji heart1">💖</div>
+            <div class="flying-emoji spark1">✨</div>
+            <div class="flying-emoji flower1">🌸</div>
+            <div class="flying-emoji heart2">💖</div>
+            <div class="flying-emoji spark2">✨</div>
+            <div class="flying-emoji flower2">🌸</div>
+            <div class="flying-emoji heart3">💖</div>
+            <div class="flying-emoji spark3">✨</div>
+            <!-- Geometric shapes -->
+            <div class="floating-shape shape1">⬡</div>
+            <div class="floating-shape shape2">△</div>
+            <div class="floating-shape shape3">⬡</div>
+            <div class="floating-shape shape4">○</div>
+            <div class="floating-shape shape5">△</div>
+            <div class="floating-shape shape6">⬡</div>
+            <div class="floating-shape shape7">✦</div>
+            <div class="floating-shape shape8">◇</div>
+            <div class="floating-shape shape9">○</div>
+            <div class="floating-shape shape10">✦</div>
+            <!-- More ending elements -->
+            <div class="flying-emoji crown1">👑</div>
+            <div class="flying-emoji gem1">💎</div>
+            <div class="flying-emoji star1">⭐</div>
+            <div class="flying-emoji crown2">👑</div>
+            <div class="flying-emoji gem2">💎</div>
+            <div class="flying-emoji star2">⭐</div>
+        </div>
+        <div class="scene-card">
+            <div class="title">The End</div>
+            <div class="ending-hearts">
+                <span>💖</span>
+            </div>
+            <div class="signature">— Ali</div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
